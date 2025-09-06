@@ -52,7 +52,7 @@ The language has an XML-like syntax and a structure that strongly resembles HTML
 </homl>
 ```
 
-<homl> - is the main tag of any HOML document (applicable to HOML documents with any doctype value).
+\<homl\> - is the main tag of any HOML document (applicable to HOML documents with any doctype value).
 Attributes:
     doctype - defines the type of HOML document.
     Values:
@@ -272,3 +272,4 @@ Nested tags:
                     if (Enter.is_active()) { Enter.update(); Enter.draw(); } // Global logic about this page
                   </content>
                 </homl>
+
