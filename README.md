@@ -55,12 +55,12 @@ The language has an XML-like syntax and a structure that strongly resembles HTML
 Attributes:<br>
 ```    ```doctype - defines the type of HOML document.<br>
 ```    ```Values:<br>
-```        ```"\_\_main\_\_"  - HOML project<br>
-```        ```"\_\_page\_\_"  - HOML page<br>
-```        ```"\_\_var\_\_"   - HOML variable<br>
-```        ```"\_\_el\_\_"    - HOML element<br>
-```        ```"\_\_lib\_\_"   - HOML library<br>
-```        ```"\_\_class\_\_" - HOML class<br>
+```         "__main__"  - HOML project```<br>
+```         "__page__"  - HOML page```<br>
+```         "__var__"   - HOML variable```<br>
+```         "__el__"    - HOML element```<br>
+```         "__lib__"   - HOML library```<br>
+```         "__class__" - HOML class```<br>
 <br>
 Nested tags:<br>
 ```    ```\<inf\> - is a tag describing the properties of a HOML document (applicable to HOML documents with any doctype value).<br>
@@ -74,28 +74,26 @@ Nested tags:<br>
 ```            ```Recommended example:<br>
 ```                <lib>lib.homl<lib>```<br>
 <br>
-```            ```lib.homl:<br>
-                    ```
-                    <homl doctype="\_\_lib\_\_">
-                      <inf>
-                        <id>example_lib</id>
-                      </inf>
+```                ```lib.homl:
+```
+                   <homl doctype="__lib__">
+                     <inf>
+                       <id>example_lib</id>
+                     </inf>
                             
-                      <content>
-                        <file>file1.homl</file>
-                        <file>file2.homl</file>
-                      </content>
-                    </homl>
-                    ```
+                     <content>
+                       <file>file1.homl</file>
+                       <file>file2.homl</file>
+                     </content>
+                   </homl>
+```
 
-```            ```The code lib-document is located in an external file, with value doctype = "__lib__". The tag <lib> contains path to this file.
-
-```            ```OR
-
-```            ```Unrecommended example:
+```            ```The code lib-document is located in an external file, with value doctype = "\_\_lib\_\_". The tag \<lib\> contains path to this file.<br><br>
+```            ```OR<br><br>
+```            ```Unrecommended example:<br>
 ```                <lib>"<homl doctype=\"__lib__\"><inf>...</content></homl>"<lib>```
 
-```            ```The code lib-document is located in tag <lib>
+```            ```The code lib-document is located in tag \<lib\>
 
         <dir> - contains the path to a folder included in the project's dist directory (applicable to HOML documents with doctype="__main__").
         Examples:
@@ -273,6 +271,7 @@ Nested tags:<br>
                     if (Enter.is_active()) { Enter.update(); Enter.draw(); } // Global logic about this page
                   </content>
                 </homl>
+
 
 
 
