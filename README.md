@@ -93,31 +93,29 @@ Nested tags:<br>
 ```            ```Unrecommended example:<br>
 ```                <lib>"<homl doctype=\"__lib__\"><inf>...</content></homl>"<lib>```
 
-```            ```The code lib-document is located in tag \<lib\>
+```            ```The code lib-document is located in tag \<lib\><br><br>
 
-        <dir> - contains the path to a folder included in the project's dist directory (applicable to HOML documents with doctype="__main__").
-        Examples:
-            <dir>assets/images</dir>
+```        ```\<dir\> - contains the path to a folder included in the project's dist directory (applicable to HOML documents with doctype="\_\_main\_\_").<br>
+```        ```Examples:<br>
+```            <dir>assets/images</dir>```<br><br>
 
-        <language> - contains the name of the language being used (applicable to HOML documents with doctype="__main__". Required for HOML documents with the "__main__" doctype).
-        Examples:
-            <language>Cpp<language>
+```        ```\<language\> - contains the name of the language being used (applicable to HOML documents with doctype="\_\_main\_\_". Required for HOML documents with the "\_\_main\_\_" doctype).<br>
+```        ```Examples:<br>
+```            <language>Cpp<language>```<br><br>
 
-        <width> - contains information about the width of the application window (applicable to HOML documents with doctype="__main__". Required for HOML documents with the "__main__" doctype).
-        Examples:
-            <width>1920</width>
+```        ```\<width\> - contains information about the width of the application window (applicable to HOML documents with doctype="\_\_main\_\_". Required for HOML documents with the "\_\_main\_\_" doctype).<br>
+```        ```Examples:<br>
+```            <width>1920</width>```<br><br>
 
-        <height> - contains information about the height of the application window (applicable to HOML documents with doctype="__main__". Required for HOML documents with the "__main__" doctype).
-        Examples:
-            <height>1080</height>
+```        ```\<height\> - contains information about the height of the application window (applicable to HOML documents with doctype="\_\_main\_\_". Required for HOML documents with the "\_\_main\_\_" doctype).<br>
+```        ```Examples:<br>
+```            <height>1080</height>```<br><br>
 
-        <bg> - contains the path/RGBA color of the page background (applicable to HOML documents with doctype="__page__". Required for HOML documents with the "__page__" doctype).
-        Examples:
-            <bg>assets/images/background.jpg</bg>
-
-            OR
-
-            <bg>{255, 255, 255, 255}</bg>
+```        ```\<bg\> - contains the path/RGBA color of the page background (applicable to HOML documents with doctype="\_\_page\_\_". Required for HOML documents with the "\_\_page\_\_" doctype).<br>
+```        ```Examples:<br>
+```            <bg>assets/images/background.jpg</bg>```<br><br>
+```        ```OR<br><br>
+```            <bg>{255, 255, 255, 255}</bg>```<br><br>
 
     <content> - is a tag describing the content of a HOML document (applicable to HOML documents with any doctype value).
     Nested tags:
@@ -271,13 +269,3 @@ Nested tags:<br>
                     if (Enter.is_active()) { Enter.update(); Enter.draw(); } // Global logic about this page
                   </content>
                 </homl>
-
-
-
-
-
-
-
-
-
-
