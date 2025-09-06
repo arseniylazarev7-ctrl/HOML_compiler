@@ -21,7 +21,7 @@ If you have correctly performed the above steps, the path to the Homl/bin folder
 # How to use HOML in terminal?
 To use the HOML toolkit, open the command prompt (preferably as an administrator) and, from any directory on the drive where you installed the compiler, type `homl` to access its features:<br>
 Properties:<br>
-|   --version: print out homl version;<br><br>
+```    ```--version: print out homl version;<br><br>
 Commands:<br>
 |   compile: compile your homl project; Args: –path<br>
 |   create: create new homl project; Args: –language, –path<br><br>
@@ -273,6 +273,7 @@ Nested tags:<br>
                     if (Enter.is_active()) { Enter.update(); Enter.draw(); } // Global logic about this page
                   </content>
                 </homl>
+
 
 
 
