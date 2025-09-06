@@ -21,10 +21,10 @@ If you have correctly performed the above steps, the path to the Homl/bin folder
 # How to use HOML in terminal?
 To use the HOML toolkit, open the command prompt (preferably as an administrator) and, from any directory on the drive where you installed the compiler, type `homl` to access its features:<br>
 Properties:<br>
-    --version: print out homl version;<br><br>
+|   --version: print out homl version;<br><br>
 Commands:<br>
-    compile: compile your homl project; Args: –path<br>
-    create: create new homl project; Args: –language, –path<br><br>
+|   compile: compile your homl project; Args: –path<br>
+|   create: create new homl project; Args: –language, –path<br><br>
 
 # HOML language documentation
 The language has an XML-like syntax and a structure that strongly resembles HTML. The fundamental unit of a HOML project is the `main.homl` file, from which all external folders, libraries, pages, and other components are included.
@@ -52,29 +52,30 @@ The language has an XML-like syntax and a structure that strongly resembles HTML
 ```
 
 \<homl\> - is the main tag of any HOML document (applicable to HOML documents with any doctype value).
-Attributes:
-    doctype - defines the type of HOML document.
-    Values:
-    	"__main__"  - HOML project
-        "__page__"  - HOML page
-        "__var__"   - HOML variable
-        "__el__"    - HOML element
-        "__lib__"   - HOML library
-        "__class__" - HOML class
-
-Nested tags:
-    <inf> - is a tag describing the properties of a HOML document (applicable to HOML documents with any doctype value).
-    Nested tags:
-        <id> - contains the ID of the HOML document. It should match the file name if the document is a separate file (applicable to HOML documents with any doctype value. Required for all HOML documents except doctype="__var__", "__el__", "__code__", "__any__").
-        Examples:
-            <id>HomlProject</id>
-
-        <lib> - contains the path/text of a HOML library document (applicable to HOML documents with doctype="__main__").
-        Examples:
-            Recommended example:
-                <lib>lib.homl</lib>
-
-                lib.homl:
+Attributes:<br>
+|   doctype - defines the type of HOML document.<br>
+|   Values:<br>
+|    	"__main__"  - HOML project<br>
+|       "__page__"  - HOML page<br>
+|       "__var__"   - HOML variable<br>
+|       "__el__"    - HOML element<br>
+|       "__lib__"   - HOML library<br>
+|       "__class__" - HOML class<br>
+|<br>
+Nested tags:<br>
+|   \<inf\> - is a tag describing the properties of a HOML document (applicable to HOML documents with any doctype value).<br>
+|   Nested tags:<br>
+|       \<id\> - contains the ID of the HOML document. It should match the file name if the document is a separate file (applicable to HOML documents with any doctype value. Required for all HOML documents except doctype="__var__", "__el__", "__code__", "__any__").<br>
+|       Examples:<br>
+|           ```<id>HomlProject</id>```<br>
+|<br>
+|       \<lib\> - contains the path/text of a HOML library document (applicable to HOML documents with doctype="__main__").<br>
+|       Examples:<br>
+|           Recommended example:<br>
+|               ```<lib>lib.homl<lib>```<br>
+|<br>
+|               lib.homl:<br>
+                    ```
                     <homl doctype="__lib__">
                       <inf>
                         <id>example_lib</id>
@@ -85,6 +86,7 @@ Nested tags:
                         <file>file2.homl</file>
                       </content>
                     </homl>
+                    ```
 
                 The code lib-document is located in an external file, with value doctype = "__lib__". The tag <lib> contains path to this file.
 
@@ -271,6 +273,7 @@ Nested tags:
                     if (Enter.is_active()) { Enter.update(); Enter.draw(); } // Global logic about this page
                   </content>
                 </homl>
+
 
 
 
