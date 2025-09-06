@@ -19,13 +19,12 @@ You can install HOML using the installer.exe file:
 If you have correctly performed the above steps, the path to the Homl/bin folder will be added to the system's Path environment variable, and you can access `homl` from any directory in the terminal to execute the desired command.
 
 # How to use HOML in terminal?
-To use the HOML toolkit, open the command prompt (preferably as an administrator) and, from any directory on the drive where you installed the compiler, type `homl` to access its features:
-Properties:
-    --version: print out homl version;
-
-Commands:
-    compile: compile your homl project; Args: –path
-    create: create new homl project; Args: –language, –path
+To use the HOML toolkit, open the command prompt (preferably as an administrator) and, from any directory on the drive where you installed the compiler, type `homl` to access its features:<br>
+Properties:<br>
+    --version: print out homl version;<br><br>
+Commands:<br>
+    compile: compile your homl project; Args: –path<br>
+    create: create new homl project; Args: –language, –path<br><br>
 
 # HOML language documentation
 The language has an XML-like syntax and a structure that strongly resembles HTML. The fundamental unit of a HOML project is the `main.homl` file, from which all external folders, libraries, pages, and other components are included.
@@ -272,4 +271,5 @@ Nested tags:
                     if (Enter.is_active()) { Enter.update(); Enter.draw(); } // Global logic about this page
                   </content>
                 </homl>
+
 
