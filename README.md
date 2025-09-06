@@ -55,8 +55,8 @@ The language has an XML-like syntax and a structure that strongly resembles HTML
 Attributes:<br>
 ```    ```doctype - defines the type of HOML document.<br>
 ```    ```Values:<br>
-```        ```"__main__"  - HOML project<br>
-```        ```"__page__"  - HOML page<br>
+```        ```"\_\_main\_\_"  - HOML project<br>
+```        ```"\_\_page\_\_"  - HOML page<br>
 ```        ```"__var__"   - HOML variable<br>
 ```        ```"__el__"    - HOML element<br>
 ```        ```"__lib__"   - HOML library<br>
@@ -273,6 +273,7 @@ Nested tags:<br>
                     if (Enter.is_active()) { Enter.update(); Enter.draw(); } // Global logic about this page
                   </content>
                 </homl>
+
 
 
 
