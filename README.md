@@ -146,15 +146,16 @@ Nested tags:<br>
 
                       </content>
                     </homl>
+```
 
-```            ```Unrecommended example:
+```            ```Unrecommended example:<br>
 ```                <page>"<homl doctype=\"__page__\"><inf>...</content></homl>```
 
-        <var> - contains the path/document-text/tag-content-text of a variable tag of the application/page (applicable to HOML documents with doctypes "__main__", "__page__").
-        Attributes:
-            type - defines the type of variable.
+```        ```\<var\> - contains the path/document-text/tag-content-text of a variable tag of the application/page (applicable to HOML documents with doctypes "__main__", "__page__").
+```        ```Attributes:
+```            ```type - defines the type of variable.
 
-            Recommended example:
+```        ```Recommended example:
                 <var type="int">num = 69</var>
 
             Unrecommended example:
@@ -268,4 +269,5 @@ Nested tags:<br>
                     if (Enter.is_active()) { Enter.update(); Enter.draw(); } // Global logic about this page
                   </content>
                 </homl>
+
 
