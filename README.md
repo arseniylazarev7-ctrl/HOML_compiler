@@ -1,4 +1,4 @@
-﻿# HOML_compiler 1.0.0
+# HOML_compiler 1.0.0
 # This technology provides the ability to compile a HOML project.
 
 # What is HOML?
@@ -9,18 +9,16 @@ The core idea behind the language is to abandon classic positioning methods usin
 As of August 2025, HOML can only be compiled to C++ SDL3, providing excellent application performance. However, this requires developers to have a good understanding of one of the most complex programming languages. It also makes it difficult to track errors during compilation, as configuring a preprocessor to analyze C++ code for errors is extremely challenging. Future plans include adding Python as a scripting language and the ability to compile HOML projects into PyFlet applications. It's also considered possible to add a custom HOML_script scripting language, specifically optimized for UI element management, and capable of compiling to both C++ SDL3 and Python PyFlet.
 
 # How to install HOML for Windows?
-```
 You can install HOML using the installer.exe file:
-    1. Download the installer.exe file from the repository.
-    2. Run the file as an administrator.
-    3. Accept the user agreement.
-    4. Specify the installation path for HOML.
-    5. Click "Install"
-```
+1. Download the installer.exe file from the repository.
+2. Run the file as an administrator.
+3. Accept the user agreement.
+4. Specify the installation path for HOML.
+5. Click "Install"
+
 If you have correctly performed the above steps, the path to the Homl/bin folder will be added to the system's Path environment variable, and you can access `homl` from any directory in the terminal to execute the desired command.
 
 # How to use HOML in terminal?
-```
 To use the HOML toolkit, open the command prompt (preferably as an administrator) and, from any directory on the drive where you installed the compiler, type `homl` to access its features:
 Properties:
     --version: print out homl version;
@@ -28,7 +26,6 @@ Properties:
 Commands:
     compile: compile your homl project; Args: –path
     create: create new homl project; Args: –language, –path
-```
 
 # HOML language documentation
 The language has an XML-like syntax and a structure that strongly resembles HTML. The fundamental unit of a HOML project is the `main.homl` file, from which all external folders, libraries, pages, and other components are included.
@@ -53,6 +50,7 @@ The language has an XML-like syntax and a structure that strongly resembles HTML
     <page ismain="true">enter.homl</page>
   </content>
 </homl>
+```
 
 <homl> - is the main tag of any HOML document (applicable to HOML documents with any doctype value).
 Attributes:
@@ -273,6 +271,4 @@ Nested tags:
                   <content>
                     if (Enter.is_active()) { Enter.update(); Enter.draw(); } // Global logic about this page
                   </content>
-                </homl>  
-
-```
+                </homl>
