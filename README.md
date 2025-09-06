@@ -117,17 +117,16 @@ Nested tags:<br>
 ```        ```OR<br><br>
 ```            <bg>{255, 255, 255, 255}</bg>```<br><br>
 
-    <content> - is a tag describing the content of a HOML document (applicable to HOML documents with any doctype value).
-    Nested tags:
-        <page> - contains the path/text of a HOML page document (applicable to HOML documents with doctype="__main__").
-        Attributes:
-            ismain - determines whether the page is the main page.
-            Values: true/false
-
-        Examples:
-            Recommended example:
-                <page>enter.homl</page>
-
+```    ```<content> - is a tag describing the content of a HOML document (applicable to HOML documents with any doctype value).<br>
+```    ```Nested tags:<br>
+```        ```\<page\> - contains the path/text of a HOML page document (applicable to HOML documents with doctype="\_\_main\_\_").<br>
+```        ```Attributes:<br>
+```            ```ismain - determines whether the page is the main page.<br>
+```            ```Values: true/false<br><br>
+```        ```Examples:<br>
+```            ```Recommended example:<br>
+```                <page>enter.homl</page>```
+```
                 enter.homl:
                     <homl doctype="__page__">
                       <inf>
@@ -148,8 +147,8 @@ Nested tags:<br>
                       </content>
                     </homl>
 
-            Unrecommended example:
-                <page>"<homl doctype=\"__page__\"><inf>...</content></homl>
+```            ```Unrecommended example:
+```                <page>"<homl doctype=\"__page__\"><inf>...</content></homl>```
 
         <var> - contains the path/document-text/tag-content-text of a variable tag of the application/page (applicable to HOML documents with doctypes "__main__", "__page__").
         Attributes:
@@ -269,3 +268,4 @@ Nested tags:<br>
                     if (Enter.is_active()) { Enter.update(); Enter.draw(); } // Global logic about this page
                   </content>
                 </homl>
+
