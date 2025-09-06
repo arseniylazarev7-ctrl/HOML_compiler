@@ -57,26 +57,26 @@ Attributes:<br>
 ```    ```Values:<br>
 ```        ```"\_\_main\_\_"  - HOML project<br>
 ```        ```"\_\_page\_\_"  - HOML page<br>
-```        ```"__var__"   - HOML variable<br>
-```        ```"__el__"    - HOML element<br>
-```        ```"__lib__"   - HOML library<br>
-```        ```"__class__" - HOML class<br>
+```        ```"\_\_var\_\_"   - HOML variable<br>
+```        ```"\_\_el\_\_"    - HOML element<br>
+```        ```"\_\_lib\_\_"   - HOML library<br>
+```        ```"\_\_class\_\_" - HOML class<br>
 <br>
 Nested tags:<br>
 ```    ```\<inf\> - is a tag describing the properties of a HOML document (applicable to HOML documents with any doctype value).<br>
 ```    ```Nested tags:<br>
-```        ```\<id\> - contains the ID of the HOML document. It should match the file name if the document is a separate file (applicable to HOML documents with any doctype value. Required for all HOML documents except doctype="__var__", "__el__", "__code__", "__any__").<br>
+```        ```\<id\> - contains the ID of the HOML document. It should match the file name if the document is a separate file (applicable to HOML documents with any doctype value. Required for all HOML documents except doctype="\_\_var\_\_", "\_\_el\_\_", "\_\_code\_\_", "\_\_any\_\_").<br>
 ```        ```Examples:<br>
 ```               <id>HomlProject</id>```<br>
 <br>
-```        ```\<lib\> - contains the path/text of a HOML library document (applicable to HOML documents with doctype="__main__").<br>
+```        ```\<lib\> - contains the path/text of a HOML library document (applicable to HOML documents with doctype="\_\_main\_\_").<br>
 ```        ```Examples:<br>
 ```            ```Recommended example:<br>
-```               <lib>lib.homl<lib>```<br>
+```                <lib>lib.homl<lib>```<br>
 <br>
 ```            ```lib.homl:<br>
                     ```
-                    <homl doctype="__lib__">
+                    <homl doctype="\_\_lib\_\_">
                       <inf>
                         <id>example_lib</id>
                       </inf>
@@ -88,14 +88,14 @@ Nested tags:<br>
                     </homl>
                     ```
 
-                The code lib-document is located in an external file, with value doctype = "__lib__". The tag <lib> contains path to this file.
+```            ```The code lib-document is located in an external file, with value doctype = "__lib__". The tag <lib> contains path to this file.
 
-            OR
+```            ```OR
 
-            Unrecommended example:
-                <lib>"<homl doctype=\"__lib__\"><inf>...</content></homl>"<lib>
+```            ```Unrecommended example:
+```                <lib>"<homl doctype=\"__lib__\"><inf>...</content></homl>"<lib>```
 
-                The code lib-document is located in tag <lib>
+```            ```The code lib-document is located in tag <lib>
 
         <dir> - contains the path to a folder included in the project's dist directory (applicable to HOML documents with doctype="__main__").
         Examples:
@@ -273,6 +273,7 @@ Nested tags:<br>
                     if (Enter.is_active()) { Enter.update(); Enter.draw(); } // Global logic about this page
                   </content>
                 </homl>
+
 
 
 
