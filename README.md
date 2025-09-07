@@ -292,8 +292,8 @@ Nested tags:<br>
               "</loop>
 ```
 
-```            ```Unrecommended example:
-```              ```<loop>loop_logic.homl</loop>
+```            ```Unrecommended example:<br>
+```              ```\<loop\>loop_logic.homl\</loop\>
 ```
               loop_logic.homl:
                   <homl doctype="__code__">
@@ -302,6 +302,7 @@ Nested tags:<br>
                     </content>
                   </homl>
 ```
+
 
 
 
