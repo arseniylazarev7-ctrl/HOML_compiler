@@ -51,7 +51,7 @@ The language has an XML-like syntax and a structure that strongly resembles HTML
 </homl>
 ```
 
-\<homl\> - is the main tag of any HOML document (applicable to HOML documents with any doctype value).
+\<homl\> - is the main tag of any HOML document (applicable to HOML documents with any doctype value)
 Attributes:<br>
 ```    ```doctype - defines the type of HOML document.<br>
 ```    ```Values:<br>
@@ -63,7 +63,7 @@ Attributes:<br>
 ```         "__class__" - HOML class```<br>
 <br>
 Nested tags:<br>
-```    ```\<inf\> - is a tag describing the properties of a HOML document (applicable to HOML documents with any doctype value).<br>
+```    ```\<inf\> - is a tag describing the properties of a HOML document (applicable to HOML documents with any doctype value)<br>
 ```    ```Nested tags:<br>
 ```        ```\<id\> - contains the ID of the HOML document. It should match the file name if the document is a separate file (applicable to HOML documents with any doctype value. Required for all HOML documents except doctype="\_\_var\_\_", "\_\_el\_\_", "\_\_code\_\_", "\_\_any\_\_").<br>
 ```        ```Examples:<br>
@@ -88,38 +88,38 @@ Nested tags:<br>
                    </homl>
 ```
 
-```                ```The code lib-document is located in an external file, with value doctype = "\_\_lib\_\_". The tag \<lib\> contains path to this file.<br><br>
+```                ```The code lib-document is located in an external file, with value doctype = "\_\_lib\_\_". The tag \<lib\> contains path to this file<br><br>
 ```            ```OR<br><br>
 ```            ```Unrecommended example:<br>
 ```                <lib>"<homl doctype=\"__lib__\"><inf>...</content></homl>"<lib>```
 
 ```                ```The code lib-document is located in tag \<lib\><br><br>
 
-```        ```\<dir\> - contains the path to a folder included in the project's dist directory (applicable to HOML documents with doctype="\_\_main\_\_").<br>
+```        ```\<dir\> - contains the path to a folder included in the project's dist directory (applicable to HOML documents with doctype="\_\_main\_\_")<br>
 ```        ```Examples:<br>
 ```            <dir>assets/images</dir>```<br><br>
 
-```        ```\<language\> - contains the name of the language being used (applicable to HOML documents with doctype="\_\_main\_\_". Required for HOML documents with the "\_\_main\_\_" doctype).<br>
+```        ```\<language\> - contains the name of the language being used (applicable to HOML documents with doctype="\_\_main\_\_". Required for HOML documents with the "\_\_main\_\_" doctype)<br>
 ```        ```Examples:<br>
 ```            <language>Cpp<language>```<br><br>
 
-```        ```\<width\> - contains information about the width of the application window (applicable to HOML documents with doctype="\_\_main\_\_". Required for HOML documents with the "\_\_main\_\_" doctype).<br>
+```        ```\<width\> - contains information about the width of the application window (applicable to HOML documents with doctype="\_\_main\_\_". Required for HOML documents with the "\_\_main\_\_" doctype)<br>
 ```        ```Examples:<br>
 ```            <width>1920</width>```<br><br>
 
-```        ```\<height\> - contains information about the height of the application window (applicable to HOML documents with doctype="\_\_main\_\_". Required for HOML documents with the "\_\_main\_\_" doctype).<br>
+```        ```\<height\> - contains information about the height of the application window (applicable to HOML documents with doctype="\_\_main\_\_". Required for HOML documents with the "\_\_main\_\_" doctype)<br>
 ```        ```Examples:<br>
 ```            <height>1080</height>```<br><br>
 
-```        ```\<bg\> - contains the path/RGBA color of the page background (applicable to HOML documents with doctype="\_\_page\_\_". Required for HOML documents with the "\_\_page\_\_" doctype).<br>
+```        ```\<bg\> - contains the path/RGBA color of the page background (applicable to HOML documents with doctype="\_\_page\_\_". Required for HOML documents with the "\_\_page\_\_" doctype)<br>
 ```        ```Examples:<br>
 ```            <bg>assets/images/background.jpg</bg>```<br><br>
 ```        ```OR<br><br>
 ```            <bg>{255, 255, 255, 255}</bg>```<br><br>
 
-```    ```\<content\> - is a tag describing the content of a HOML document (applicable to HOML documents with any doctype value).<br>
+```    ```\<content\> - is a tag describing the content of a HOML document (applicable to HOML documents with any doctype value)<br>
 ```    ```Nested tags:<br>
-```        ```\<page\> - contains the path/text of a HOML page document (applicable to HOML documents with doctype="\_\_main\_\_").<br>
+```        ```\<page\> - contains the path/text of a HOML page document (applicable to HOML documents with doctype="\_\_main\_\_")<br>
 ```        ```Attributes:<br>
 ```            ```ismain - determines whether the page is the main page.<br>
 ```            ```Values: true/false<br><br>
@@ -155,7 +155,7 @@ Nested tags:<br>
 <br>
 ```                ```The tag contains the text of the file on the page
 
-```        ```\<var\> - contains the path/document-text/tag-content-text of a variable tag of the application/page (applicable to HOML documents with doctypes "\_\_main\_\_", "\_\_page\_\_").<br>
+```        ```\<var\> - contains the path/document-text/tag-content-text of a variable tag of the application/page (applicable to HOML documents with doctypes "\_\_main\_\_", "\_\_page\_\_")<br>
 ```        ```Attributes:<br>
 ```            ```type - defines the type of variable.<br>
 <br>
@@ -184,7 +184,7 @@ Nested tags:<br>
                      </homl>
 ```
 
-```        ```\<el\> - contains the path/document-text/tag-content-text of an element tag of the page (applicable to HOML documents with doctype="\_\_page\_\_").<br>
+```        ```\<el\> - contains the path/document-text/tag-content-text of an element tag of the page (applicable to HOML documents with doctype="\_\_page\_\_")<br>
 ```        ```Attributes:<br>
 ```            ```type - defines the type of element.<br>
 <br>
@@ -210,80 +210,98 @@ Nested tags:<br>
                         </homl>
 ```
 
-        <init> - contains the application initialization logic code (applicable to HOML documents with doctype="__page__")
-        Recommended example:
-            <init>init_logic.homl</init>
-
-            init_logic.homl:
-                <homl doctype="__code__">
-                  <content>
-                    print("Hello, world!") // Initialization logic
-                  </content>
-                </homl>
-
-        Unrecommended example:
-            <init>"
-              <homl doctype="__code__">
-                <content>
+```        ```\<init\> - contains the application initialization logic code (applicable to HOML documents with doctype="\_\_page\_\_")<br>
+```        ```Examples:<br>
+```            ```Recommended example:<br>
+```                ```<init>init_logic.homl</init><br>
+```
+                init_logic.homl:
+                    <homl doctype="__code__">
+                      <content>
+                        print("Hello, world!") // Initialization logic
+                      </content>
+                    </homl>
+```
+    
+```            ```Unrecommended example:
+```
+                <init>"
+                  <homl doctype="__code__">
+                    <content>
+                      print("Hello, world!") // Initialization logic
+                    </content>
+                  </homl>
+                "</init>
+```
+    
+```            ```Unrecommended example:
+```
+                <init>
                   print("Hello, world!") // Initialization logic
-                </content>
-              </homl>
-            "</init>
+                </init>
+```
 
-        Unrecommended example:
-            <init>
-              print("Hello, world!") // Initialization logic
-            </init>
-
-        <update> - contains the application update logic code (applicable to HOML documents with doctype="__page__")
-        Recommended example:
-            <update>update_logic.homl</update>
-
-            update_logic.homl:
-                <homl doctype="__code__">
-                  <content>
-                    print("New frame!") // Updating logic
-                  </content>
-                </homl>
-
-        Unrecommended example:
-            <update>"
-              <homl doctype="__code__">
-                <content>
+```        ```\<update\> - contains the application update logic code (applicable to HOML documents with doctype="\_\_page\_\_")<br>
+```        ```Examples:<br>
+```            ```Recommended example:<br>
+```                ```<update>update_logic.homl</update>
+```
+                update_logic.homl:
+                    <homl doctype="__code__">
+                      <content>
+                        print("New frame!") // Updating logic
+                      </content>
+                    </homl>
+```
+    
+```            ```Unrecommended example:
+```
+                <update>"
+                  <homl doctype="__code__">
+                    <content>
+                      print("New frame!") // Updating logic
+                    </content>
+                  </homl>
+                "</update>
+```
+    
+```            ```Unrecommended example:
+```
+                <update>
                   print("New frame!") // Updating logic
-                </content>
-              </homl>
-            "</update>
+                </update>
+```
 
-        Unrecommended example:
-            <update>
-              print("New frame!") // Updating logic
-            </update>
+```        ```<loop> - contains the application global loop logic code (applicable to HOML documents with doctype="\_\_page\_\_")<br>
+```        ```Examples:<br>
+```            ```Recommended example:<br>
+```
+              <loop>
+                if (Enter.is_active()) { Enter.update(); Enter.draw(); } // Global logic about this page
+              </loop>
+```
 
-        <loop> - contains the application global loop logic code (applicable to HOML documents with doctype="__page__")
-        Recommended example:
-            <loop>
-              if (Enter.is_active()) { Enter.update(); Enter.draw(); } // Global logic about this page
-            </loop>
-
-        Unrecommended example:
-            <loop>"
-              <homl doctype="__code__">
-                <content>
-                  if (Enter.is_active()) { Enter.update(); Enter.draw(); } // Global logic about this page
-                </content>
-              </homl>
-            "</loop>
-
-        Unrecommended example:
-            <loop>loop_logic.homl</loop>
-
-            loop_logic.homl:
+```            ```Unrecommended example:
+```
+              <loop>"
                 <homl doctype="__code__">
                   <content>
                     if (Enter.is_active()) { Enter.update(); Enter.draw(); } // Global logic about this page
                   </content>
                 </homl>
+              "</loop>
+```
+
+```            ```Unrecommended example:
+```              ```<loop>loop_logic.homl</loop>
+```
+              loop_logic.homl:
+                  <homl doctype="__code__">
+                    <content>
+                      if (Enter.is_active()) { Enter.update(); Enter.draw(); } // Global logic about this page
+                    </content>
+                  </homl>
+```
 
 
 
