@@ -88,12 +88,12 @@ Nested tags:<br>
                    </homl>
 ```
 
-```            ```The code lib-document is located in an external file, with value doctype = "\_\_lib\_\_". The tag \<lib\> contains path to this file.<br><br>
+```                ```The code lib-document is located in an external file, with value doctype = "\_\_lib\_\_". The tag \<lib\> contains path to this file.<br><br>
 ```            ```OR<br><br>
 ```            ```Unrecommended example:<br>
 ```                <lib>"<homl doctype=\"__lib__\"><inf>...</content></homl>"<lib>```
 
-```            ```The code lib-document is located in tag \<lib\><br><br>
+```                ```The code lib-document is located in tag \<lib\><br><br>
 
 ```        ```\<dir\> - contains the path to a folder included in the project's dist directory (applicable to HOML documents with doctype="\_\_main\_\_").<br>
 ```        ```Examples:<br>
@@ -125,7 +125,7 @@ Nested tags:<br>
 ```            ```Values: true/false<br><br>
 ```        ```Examples:<br>
 ```            ```Recommended example:<br>
-```                <page>enter.homl</page>```
+```                <page>enter.homl</page>```<br>
 ```
                 enter.homl:
                     <homl doctype="__page__">
@@ -147,31 +147,42 @@ Nested tags:<br>
                       </content>
                     </homl>
 ```
+```                ```The tag contains the path to the file on the page
+
 
 ```            ```Unrecommended example:<br>
-```                <page>"<homl doctype=\"__page__\"><inf>...</content></homl>```
+```                <page>"<homl doctype=\"__page__\"><inf>...</content></homl>```<br>
+<br>
+```                ```The tag contains the text of the file on the page
 
-```        ```\<var\> - contains the path/document-text/tag-content-text of a variable tag of the application/page (applicable to HOML documents with doctypes "__main__", "__page__").
-```        ```Attributes:
-```            ```type - defines the type of variable.
-
-```        ```Recommended example:
-                <var type="int">num = 69</var>
-
-            Unrecommended example:
-                <var type="int">"
-                  <homl doctype="__var__">
-                    <content>num = 69</content>
-                  </homl>
-                "</var>
-
-            Unrecommended example:
-                <var type="int">variable.homl</var>
-
-                variable.homl:
-                    <homl doctype="__var__">
-                      <content>num = 69</content>
-                    </homl>
+```        ```\<var\> - contains the path/document-text/tag-content-text of a variable tag of the application/page (applicable to HOML documents with doctypes "\_\_main\_\_", "\_\_page\_\_").<br>
+```        ```Attributes:<br>
+```            ```type - defines the type of variable.<br>
+<br>
+```        ```Examples:<br>
+```            ```Recommended example:<br>
+```                <var type="int">num = 69</var>```<br>
+<br>
+```                ```The tag contains the text of name/name-and-value of the variable
+<br>
+```            ```Unrecommended example:
+```
+                   <var type="int">"
+                     <homl doctype="__var__">
+                       <content>num = 69</content>
+                     </homl>
+                   "</var>
+```
+```                ```The tag contains the text of the homl-document of the variable
+<br>
+```            ```Unrecommended example:
+```                <var type="int">variable.homl</var>```<br>
+```
+                   variable.homl:
+                     <homl doctype="__var__">
+                       <content>num = 69</content>
+                     </homl>
+```
 
         <el> - contains the path/document-text/tag-content-text of an element tag of the page (applicable to HOML documents with doctype="__page__").
         Attributes:
@@ -269,5 +280,6 @@ Nested tags:<br>
                     if (Enter.is_active()) { Enter.update(); Enter.draw(); } // Global logic about this page
                   </content>
                 </homl>
+
 
 
