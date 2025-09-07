@@ -117,7 +117,7 @@ Nested tags:<br>
 ```        ```OR<br><br>
 ```            <bg>{255, 255, 255, 255}</bg>```<br><br>
 
-```    ```<content> - is a tag describing the content of a HOML document (applicable to HOML documents with any doctype value).<br>
+```    ```\<content\> - is a tag describing the content of a HOML document (applicable to HOML documents with any doctype value).<br>
 ```    ```Nested tags:<br>
 ```        ```\<page\> - contains the path/text of a HOML page document (applicable to HOML documents with doctype="\_\_main\_\_").<br>
 ```        ```Attributes:<br>
@@ -163,7 +163,7 @@ Nested tags:<br>
 ```            ```Recommended example:<br>
 ```                <var type="int">num = 69</var>```<br>
 <br>
-```                ```The tag contains the text of name/name-and-value of the variable
+```                ```The tag contains the text of name/name-and-value of the variable<br>
 <br>
 ```            ```Unrecommended example:
 ```
@@ -173,9 +173,9 @@ Nested tags:<br>
                      </homl>
                    "</var>
 ```
-```                ```The tag contains the text of the homl-document of the variable
-<br>
-```            ```Unrecommended example:
+```                ```The tag contains the text of the homl-document of the variable<br>
+
+```            ```Unrecommended example:<br>
 ```                <var type="int">variable.homl</var>```<br>
 ```
                    variable.homl:
@@ -184,27 +184,31 @@ Nested tags:<br>
                      </homl>
 ```
 
-        <el> - contains the path/document-text/tag-content-text of an element tag of the page (applicable to HOML documents with doctype="__page__").
-        Attributes:
-            type - defines the type of element.
+```        ```\<el\> - contains the path/document-text/tag-content-text of an element tag of the page (applicable to HOML documents with doctype="\_\_page\_\_").<br>
+```        ```Attributes:<br>
+```            ```type - defines the type of element.<br>
+<br>
+```        ```Examples:<br>
+```            ```Recommended example:<br>
+```                <el type="Label">(id="example_label", text="Hello, world!")</el>```<br>
 
-            Recommended example:
-                <el type="Label">(id="example_label", text="Hello, world!")</el>
-
-            Unrecommended example:
-                <el type="Label">"
-                  <homl doctype="__el__">
-                    <content>(id="example_label", text="Hello, world!")</content>
-                  </homl>
-                "</el>
-
-            Unrecommended example:
-                <el type="Label">element.homl</var>
-
-                element.homl:
-                    <homl doctype="__el__">
-                      <content>(id="example_label", text="Hello, world!")</content>
-                    </homl>
+```            ```Unrecommended example:
+```
+                    <el type="Label">"
+                      <homl doctype="__el__">
+                        <content>(id="example_label", text="Hello, world!")</content>
+                      </homl>
+                    "</el>
+```
+    
+```            ```Unrecommended example:<br>
+```                   <el type="Label">element.homl</var>```
+```
+                    element.homl:
+                        <homl doctype="__el__">
+                          <content>(id="example_label", text="Hello, world!")</content>
+                        </homl>
+```
 
         <init> - contains the application initialization logic code (applicable to HOML documents with doctype="__page__")
         Recommended example:
@@ -280,6 +284,7 @@ Nested tags:<br>
                     if (Enter.is_active()) { Enter.update(); Enter.draw(); } // Global logic about this page
                   </content>
                 </homl>
+
 
 
 
